@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>HTML Editor</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <div style="max-width:1400px;margin:0 auto">
+        <h1
+            style="color:#eaf6ff;margin:8px 0 18px;font-size:20px;font-weight:700;letter-spacing:-0.2px;padding-top: 20px;">
+            HTML Editor
+        </h1>
+
+        <div class="app">
+            <div class="panel editor" style="min-width:360px;">
+                <div class="toolbar">
+                    <div class="brand">
+                        <div class="logo">
+                            <span class="line1">HT</span>
+                            <span class="line2">ML</span>
+                        </div>
+                        <div class="title">Editor</div>
+                    </div>
+
+                    <div class="row">
+                        <button id="runBtn" class="btn-primary">Run (Ctrl+Enter)</button>
+                        <button id="exportBtn">Export .html (Ctrl+S)</button>
+                        <button id="resetBtn">Reset</button>
+                        <label class="tog" title="Auto-run preview"><input type="checkbox" id="autoRun" checked />
+                            Auto</label>
+                    </div>
+                </div>
+
+                <div class="editor-area">
+                    <textarea id="editor" spellcheck="false" autocomplete="off"></textarea>
+                </div>
+
+                <div class="footer">
+                    Editor includes support for <span class="sample-tag">&lt;style&gt;</span> and <span
+                        class="sample-tag">&lt;script&gt;</span> tags.
+                    <div style="margin-top:6px;color:var(--muted)">Shortcuts: <em>Ctrl/Cmd + Enter</em> = Run •
+                        <em>Ctrl/Cmd + S</em> = Export<br>Made by <a
+                            href="https://github.com/Cheze-Burgur"><strong>@Cheze</strong></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="split" id="split">
+                <div class="bar"></div>
+            </div>
+
+            <div class="panel preview">
+                <div class="preview-top">
+                    <div style="font-weight:600">Preview</div>
+                    <div style="margin-left:auto;display:flex;gap:10px;align-items:center">
+                        <label style="font-size:13px;color:var(--muted);">Here you can preview your webpage.</label>
+                    </div>
+                </div>
+
+                <iframe id="preview" class="preview-iframe"
+                    sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
+                <div class="footer">For security, preview is sandboxed, but it still allows for script execution.
+                    Download to run
+                    fully.</div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
